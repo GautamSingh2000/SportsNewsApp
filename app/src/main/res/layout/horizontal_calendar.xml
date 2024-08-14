@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:id="@+id/cardView7"
+        android:layout_width="wrap_content"
+        app:strokeWidth="0dp"
+        app:strokeColor="#00000000"
+        app:cardBackgroundColor="@color/white"
+        android:layout_height="wrap_content"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardElevation="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/month_year_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableTint="@color/black"
+            android:gravity="center"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="Hello World"
+            app:drawableEndCompat="@drawable/down" />
+    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_2sdp"
+        tools:listitem="@layout/single_date_layout"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView7" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

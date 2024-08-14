@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/_10sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Screens.Fragments.HomeFragment">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/uper_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                android:paddingBottom="10dp"
+                android:outlineSpotShadowColor="@color/little_dark_gray"
+                app:cardCornerRadius="10.dp"
+                app:cardElevation="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/uperll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/match_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_17sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/rem"
+                        android:text="World cup"
+                        android:textFontWeight="10"
+                        android:textSize="14.sp" />
+
+                    <TextView
+                        android:id="@+id/match_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/rem"
+                        android:text="20Hr : 20Min : 10Sec"
+                        android:textSize="10sp"
+                        android:textColor="@color/light_gray"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/match_state"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="7.dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/match_state"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            app:cardCornerRadius="100dp"
+                            app:cardElevation="3.dp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                              android:id="@+id/teamAFlag"
+                                android:layout_width="50.dp"
+                                android:layout_height="50.dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/indian_flag_icon" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/teamOneName"
+                            android:layout_width="wrap_content"
+                            android:text="INDIA"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"/>
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView3"
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:layout_centerInParent="true"
+                        android:backgroundTint="#DDDADA"
+                        app:cardCornerRadius="10.dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Vs"
+                            android:textColor="@color/little_dark_gray" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/match_state"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="7.dp"
+                        android:layout_marginEnd="30dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="100dp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            app:cardElevation="3.dp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/teamBFlag"
+                                android:layout_width="50.dp"
+                                android:layout_height="50.dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/south_africa_flag" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/teamTwoName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="SOUTH AFRICA"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/white"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        android:layout_below="@id/uper_card">-->
+<!--        <RelativeLayout-->
+<!--            android:layout_below="@id/linearLayout2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <TextView-->
+<!--                android:id="@+id/locationh1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Location : "-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_marginStart="@dimen/_17sdp"-->
+<!--                android:textSize="@dimen/_12ssp"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="start"-->
+<!--                android:layout_marginEnd="@dimen/_18sdp"-->
+<!--                android:text="idhsbfdkfhbsdkflsjdnfljsdnasdf"-->
+<!--                android:layout_toEndOf="@id/locationh1"/>-->
+<!--        </RelativeLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+</RelativeLayout>

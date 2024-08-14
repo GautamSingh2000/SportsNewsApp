@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/home"
+    android:icon="@drawable/selectedhome"
+    android:title="Home" />
+    <item
+        android:id="@+id/Search"
+        android:icon="@drawable/holosearch"
+        android:title="Search" />
+    <item android:id="@+id/update"
+        android:icon="@drawable/holo_update"
+        android:title="Update" />
+    <item android:id="@+id/shots"
+        android:icon="@drawable/holoshot"
+        android:title="Shorts" />
+    <item android:id="@+id/players"
+        android:icon="@drawable/unselectedplayer"
+        android:title="Players" />
+</menu>

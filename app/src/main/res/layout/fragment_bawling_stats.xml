@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Screens.Fragments.BallingStatsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F3F1F1"
+                    android:fontFamily="@font/signika_medium"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text="Format"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/signika_medium"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text="Matches"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/signika_medium"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text="Innings"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/signika_medium"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text="Balls"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/signika_medium"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text="Overs"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/signika_medium"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text="Runs"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/signika_medium"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text="Wickets"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/signika_medium"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text="Econ"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/signika_medium"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text="Average"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/signika_medium"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text="Strike"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/signika_medium"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text="BestInning"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/signika_medium"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text="BestMatch"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/state_rv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:scrollbarSize="0.7dp"
+                android:scrollbars="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="@+id/outer_layout"
+                app:layout_constraintStart_toEndOf="@+id/outer_layout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:itemCount="10"
+                tools:listitem="@layout/single_player_bawling_stats_data" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:visibility="visible"
+        android:id="@+id/scroll_down_iv"
+        android:translationZ="@dimen/_10sdp"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:src="@drawable/scroll_down"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/nested_scroll_view"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

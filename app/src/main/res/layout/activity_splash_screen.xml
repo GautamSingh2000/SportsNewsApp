@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Screens.Activity.SplashScreen">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/icon_iv"
+        app:cardElevation="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/transparent"
+        android:layout_centerInParent="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:padding="@dimen/_10sdp"
+                android:layout_width="187dp"
+                android:layout_height="194dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/circle_logo_name" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/bottom_mice"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_315sdp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/mike_one" />
+
+    <ImageView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mike_two"
+        android:id="@+id/right_mice"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:layout_marginTop="-70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mike_three"
+        android:id="@+id/left_mice"/>
+</RelativeLayout>

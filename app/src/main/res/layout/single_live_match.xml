@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/liveMatchcard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    android:outlineSpotShadowColor="@color/little_dark_gray"
+    app:cardCornerRadius="10.dp"
+    app:cardElevation="20.dp"
+
+    android:layout_marginBottom="@dimen/_30sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/liveCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:layout_marginTop="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/nextbtn"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/go_forword"
+                android:tint="@color/dark_blue"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10.dp"
+                android:layout_marginTop="7.sp"
+                />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/live_icon"
+                android:visibility="gone"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10.dp"
+                android:layout_marginTop="-3dp"
+                app:lottie_rawRes="@raw/red_dot" />
+
+            <TextView
+                android:id="@+id/match_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10.dp"
+                android:layout_marginTop="7.sp"
+                android:fontFamily="@font/rem"
+                android:text="Live Match"
+                android:textFontWeight="20"
+                android:textSize="17.sp"
+                android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_below="@id/match_state">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="#DDDADA"
+                app:cardCornerRadius="10.dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Vs"
+                    android:textColor="@color/little_dark_gray" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15.dp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_10sdp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="100dp"
+                        app:cardElevation="3.dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/teamOnelogo"
+                            android:layout_width="60.dp"
+                            android:layout_height="60.dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/indian_flag_icon" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/teamOneName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="INDIA"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/teamOneName"
+                        android:layout_marginTop="5.dp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/teamOneRuns"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="--"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/teamOneOvers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="(--)"
+                            android:textColor="@color/light_gray"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_10sdp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="100dp"
+                        app:cardElevation="3.dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/teamTwologo"
+                            android:layout_width="65dp"
+                            android:layout_height="60.dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/south_africa_flag" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/teamTwoName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:maxLines="2"
+                        android:text="SOUTH AFRICA"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_teamTow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.dp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/teamTwoRuns"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="--"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/teamTwoOvers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="(--)"
+                            android:textColor="@color/light_gray"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/custom_shape">
+
+            <TextView
+                android:id="@+id/leag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="World Cup"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

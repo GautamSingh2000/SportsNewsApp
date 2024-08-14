@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Screens.Fragments.SquardFragment">
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/squardtabll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        app:tabTextColor="@color/black"
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        app:tabSelectedTextColor="@color/dark_blue"
+        app:tabIndicatorColor="@color/dark_blue"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        style="@style/Widget.Material3.TabLayout.OnSurface">
+
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="India" />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="South Africa"/>
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/squardvp"
+        android:layout_below="@+id/squardtabll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.viewpager2.widget.ViewPager2>
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/shimmer_mainll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+            <include
+                android:id="@+id/liveCardView"
+                layout="@layout/shimmer_livematches_single" />
+
+            <include
+                android:id="@+id/text0"
+                layout="@layout/shimmer_single_text"/>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/topLeagueRv1"
+                    layout="@layout/shimmer_single_league" />
+
+                <include
+                    android:id="@+id/topLeagueRv2"
+                    layout="@layout/shimmer_single_league" />
+
+                <include
+                    android:id="@+id/topLeagueRv3"
+                    layout="@layout/shimmer_single_league" />
+            </LinearLayout>
+
+        <include
+            android:id="@+id/text"
+            layout="@layout/shimmer_single_text"/>
+
+        <include
+            android:id="@+id/rc"
+            layout="@layout/shimmer_single_upcoming_matches" />
+
+
+        <include
+            android:id="@+id/text2"
+            layout="@layout/shimmer_single_text" />
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text2"
+            android:layout_marginHorizontal="@dimen/_10sdp">
+
+            <include layout="@layout/shimmer_single_trending_news" />
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </LinearLayout>
+</ScrollView>

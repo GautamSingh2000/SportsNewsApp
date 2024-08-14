@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "507141716330",
+    "project_id": "sports-news-e3db0",
+    "storage_bucket": "sports-news-e3db0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507141716330:android:0c10f987bc0d0f10fc4d13",
+        "android_client_info": {
+          "package_name": "com.mindgeeks.sportsnews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "507141716330-efi36l6gpjupdpsg0hn0ko66o42f6983.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mindgeeks.sportsnews",
+            "certificate_hash": "568376745c6ccb302bee26c9c7b16608d85c625a"
+          }
+        },
+        {
+          "client_id": "507141716330-83hfes2abaf3v0da5gp7c2btjojb0v84.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjl6_1HO5k4DH3QtBKYJ2K2QUEPEbPkT4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "507141716330-83hfes2abaf3v0da5gp7c2btjojb0v84.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

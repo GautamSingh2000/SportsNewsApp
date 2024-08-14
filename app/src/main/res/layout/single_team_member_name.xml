@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/ll"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/_17sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profile_cv"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:cardCornerRadius="@dimen/_500sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:cardBackgroundColor="#E6E5E5"
+        android:layout_centerVertical="true">
+        <ImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:tint="@color/light_gray"
+            android:scaleType="centerCrop"
+
+            android:src="@drawable/player_image"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/player_name_tv"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/profile_cv"
+        android:text="@android:string/unknownName"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textSize="@dimen/_10ssp" />
+
+    <TextView
+        android:id="@+id/nationality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/player_name_tv"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_toEndOf="@id/profile_cv"
+        android:text="nationality"
+        android:textSize="@dimen/_8ssp" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/materialDivider4"
+        android:layout_width="match_parent"
+        android:layout_below="@id/nationality"
+        android:layout_height="0.7dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/lightest_gray" />
+</RelativeLayout>

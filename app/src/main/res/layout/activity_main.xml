@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/blue_gradel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/cordinate_main_activity"
+    tools:context=".Screens.Activity.MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:elevation="@dimen/_10sdp"
+        android:text="Welcome"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_17ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/MainScreeFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="70.dp"
+        android:layout_marginHorizontal="40.dp"
+        app:cardElevation="5.dp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            app:activeIndicatorLabelPadding="10.dp"
+            app:elevation="10dp"
+            app:itemActiveIndicatorStyle="@null"
+            app:itemIconSize="22dp"
+            app:compatShadowEnabled="true"
+            app:itemIconTint="@color/dark_blue"
+            app:itemPaddingBottom="10.dp"
+            app:itemRippleColor="@color/light_blue"
+            app:itemTextColor="@color/dark_blue"
+            app:menu="@menu/bottom_navi_menu" />
+    </androidx.cardview.widget.CardView>
+
+    <com.github.furkankaplan.fkblurview.FKBlurView
+        android:visibility="gone"
+        android:id="@+id/blurView"
+        android:translationZ="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

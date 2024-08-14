@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".Screens.Activity.PlayerDetailActivity">
+
+    <include android:id="@+id/appbar" layout="@layout/component_app_bar"/>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/mainll"
+        android:layout_below="@id/appbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/firstll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/customshape"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_alignBottom="@id/ll"
+                android:paddingTop="@dimen/_5sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/white_custom_shape" />
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/player_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/signika_medium"
+                        android:gravity="start"
+                        android:text="--"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_18ssp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="@dimen/_14sdp"
+                        android:layout_height="@dimen/_14sdp"
+                        android:layout_below="@id/player_name"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:foregroundGravity="center"
+                        android:padding="4dp"
+                        android:src="@drawable/age" />
+
+                    <TextView
+                        android:id="@+id/age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/player_name"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_toEndOf="@+id/imageView2"
+                        android:fontFamily="@font/signika_medium"
+                        android:text="-- YEARS"
+                        android:textColor="@color/white"
+                        android:textFontWeight="100"
+                        android:textSize="@dimen/_9ssp"
+                        android:textStyle="normal" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/flag"
+                        android:layout_width="@dimen/_14sdp"
+                        android:layout_height="@dimen/_14sdp"
+                        android:layout_below="@id/age"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:src="@drawable/indian_flag" />
+
+                    <TextView
+                        android:id="@+id/nationality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/age"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_toEndOf="@id/flag"
+                        android:fontFamily="@font/signika_medium"
+                        android:text="--"
+                        android:textColor="@color/white"
+                        android:textFontWeight="100"
+                        android:textSize="@dimen/_9ssp"
+                        android:textStyle="normal" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/playerImage"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_200sdp"
+                    android:layout_marginBottom="-5dp"
+                    android:layout_weight="1.5"
+                    android:src="@drawable/batsman" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/customshape"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/signika_medium"
+                    android:text="Batting Style"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/batting_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/signika_medium"
+                    android:text="    --         "
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/_9ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/signika_medium"
+                    android:text="Bowling Style"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/bawling_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/signika_medium"
+                    android:text="    --         "
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/_9ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstll"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="20dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/signika_medium"
+                    android:text="Career Stats"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9ssp"
+                    android:textStyle="bold"/>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/materialDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/textView"
+                    app:dividerColor="@color/light_gray" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/materialDivider2"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_above="@id/materialDivider"
+                    app:dividerColor="@color/red"/>
+
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_below="@+id/materialDivider"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:context=".Screens.Fragments.BattingSatsFragment">
+
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tabll"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:background="@drawable/white_rounded_box"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tabGravity="fill"
+                            app:tabIndicator="@drawable/redbox"
+                            app:tabIndicatorAnimationMode="elastic"
+                            app:tabIndicatorColor="@null"
+                            app:tabIndicatorFullWidth="true"
+                            app:tabIndicatorGravity="stretch"
+                            app:tabIndicatorHeight="0dp"
+                            app:tabMode="fixed"
+                            app:tabRippleColor="@color/red"
+                            app:tabSelectedTextColor="@color/white">
+
+                            <com.google.android.material.tabs.TabItem
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:foregroundGravity="center"
+                                android:text="Batting Stats" />
+
+                            <com.google.android.material.tabs.TabItem
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:foregroundGravity="center"
+                                android:text="Bowling Stats" />
+
+                        </com.google.android.material.tabs.TabLayout>
+
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/viewpager"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_180sdp"
+                            android:layout_below="@id/tabll"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:background="@color/white"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tabll" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:id="@+id/dv"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            app:dividerColor="@color/shimmer_gray"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/viewpager"/>
+
+                        <TextView
+                            android:id="@+id/simmilar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:fontFamily="@font/signika_medium"
+                            android:text="SIMILAR PLAYERS"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/viewpager"
+                            app:layout_constraintTop_toBottomOf="@+id/dv" />
+
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:id="@+id/materialDivider3"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            app:dividerColor="@color/shimmer_gray"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/simmilar" />
+
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/simmilarplayers"
+                            android:layout_width="match_parent"
+                            android:background="@color/white"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="110dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/materialDivider3"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:src="@drawable/back_btn"
+                            android:layout_marginTop="@dimen/_55sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:tint="@color/light_gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/simmilar" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.core.widget.NestedScrollView>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_below="@id/appbar"
+        android:translationZ="@dimen/_10sdp"
+        android:id="@+id/playerdetial_shimmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <include layout="@layout/shimmer_player_detail"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</RelativeLayout>

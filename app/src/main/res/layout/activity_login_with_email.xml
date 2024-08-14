@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Screens.Activity.LoginWithEmailActivity">
+
+    <include
+        android:id="@+id/appba"
+        layout="@layout/component_app_bar" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:visibility="gone"
+        android:id="@+id/lottie_view"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:translationZ="0dp"
+        android:layout_alignTop="@id/passwordll"
+        android:layout_marginTop="-5dp"
+        android:layout_marginStart="-57dp"
+        android:layout_toEndOf="@+id/passwordll"
+        android:scaleType="centerCrop"
+        app:lottie_rawRes="@raw/shiba_peep"
+        app:lottie_repeatMode="reverse" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation"
+        android:layout_below="@id/appba"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        app:lottie_rawRes="@raw/login"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@id/animation"
+        android:hint="Email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/custom_email"
+            android:inputType="textEmailAddress"
+            android:drawablePadding="@dimen/_10sdp"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:translationZ="5dp"
+        android:layout_below="@id/emailll"
+        android:hint="Password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/custom_lock"
+            android:inputType="textEmailAddress"
+            android:drawablePadding="@dimen/_10sdp"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/ligin_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordll"
+        android:layout_centerHorizontal="true"
+        android:elevation="@dimen/_10sdp"
+        android:shadowColor="@color/little_dark_gray"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:backgroundTint="@color/dark_blue"
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_50sdp"
+        android:text="Login"/>
+
+</RelativeLayout>

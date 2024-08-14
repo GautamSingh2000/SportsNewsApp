@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+      <TextView
+            android:id="@+id/titile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F3F1F1"
+            android:fontFamily="@font/signika_medium"
+            android:paddingVertical="@dimen/_4sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="Format"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
+
+      <TextView
+            android:id="@+id/Matches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/signika_light"
+            android:paddingVertical="@dimen/_4sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="20"
+            android:textColor="@color/light_gray"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_12ssp"
+            tools:targetApi="p" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            app:dividerColor="@color/shimmer_gray"/>
+
+
+      <TextView
+            android:id="@+id/Innings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:fontFamily="@font/signika_light"
+            android:paddingVertical="@dimen/_4sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="30"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_12ssp" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            app:dividerColor="@color/shimmer_gray"/>
+
+      <TextView
+            android:id="@+id/Balls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:fontFamily="@font/signika_light"
+            android:paddingVertical="@dimen/_4sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="50"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_12ssp" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            app:dividerColor="@color/shimmer_gray"/>
+
+      <TextView
+            android:id="@+id/Overs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:fontFamily="@font/signika_light"
+            android:paddingVertical="@dimen/_4sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="200"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_12ssp" />
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            app:dividerColor="@color/shimmer_gray"/>
+
+      <TextView
+            android:id="@+id/Runs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:fontFamily="@font/signika_light"
+            android:paddingVertical="@dimen/_4sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="560"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_12ssp" />
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            app:dividerColor="@color/shimmer_gray"/>
+      <TextView
+            android:id="@+id/Wickets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:fontFamily="@font/signika_light"
+            android:paddingVertical="@dimen/_4sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="40"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_12ssp" />
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            app:dividerColor="@color/shimmer_gray"/>
+
+      <TextView
+            android:id="@+id/Econ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:fontFamily="@font/signika_light"
+            android:paddingVertical="@dimen/_4sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="30"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_12ssp" />
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            app:dividerColor="@color/shimmer_gray"/>
+
+      <TextView
+            android:id="@+id/Average"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:fontFamily="@font/signika_light"
+            android:paddingVertical="@dimen/_4sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="120"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_12ssp" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            app:dividerColor="@color/shimmer_gray"/>
+      <TextView
+            android:id="@+id/Strike"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:fontFamily="@font/signika_light"
+            android:paddingVertical="@dimen/_4sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="1260"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_12ssp" />
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            app:dividerColor="@color/shimmer_gray"/>
+      <TextView
+            android:id="@+id/Bestinning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:fontFamily="@font/signika_light"
+            android:paddingVertical="@dimen/_4sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="021"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            app:dividerColor="@color/shimmer_gray"/>
+
+      <TextView
+            android:id="@+id/Bestmatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:fontFamily="@font/signika_light"
+            android:paddingVertical="@dimen/_4sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="20"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            app:dividerColor="@color/shimmer_gray"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

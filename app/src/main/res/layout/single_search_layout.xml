@@ -6,7 +6,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:cardCornerRadius="@dimen/_10sdp"
-    app:cardBackgroundColor="#3577A3"
+    app:cardBackgroundColor="@color/gray_red"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +34,6 @@
                 android:layout_marginTop="@dimen/_3sdp"
                 android:textSize="@dimen/_10ssp"
                 android:text="How many playe present in one team."
-                android:textColor="#BCE2FB" />
+                android:textColor="#FAD9CE" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>

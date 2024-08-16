@@ -38,7 +38,7 @@ class TrendingNewsAdapter(val context: Context, val list: List<TrendingNew>) :
 
         holder.card.setOnClickListener {
             val intent = Intent(context, TrendingNewsActivity::class.java)
-            intent.putExtra("url", data.url)
+            intent.putExtra("url", data)
             context.startActivity(intent)
         }
 

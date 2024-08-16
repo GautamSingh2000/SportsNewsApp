@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.mindgeeks.sportsnews" />
+                  <option name="mobileSdkAppId" value="1:507141716330:android:0c10f987bc0d0f10fc4d13" />
+                  <option name="projectId" value="sports-news-e3db0" />
+                  <option name="projectNumber" value="507141716330" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

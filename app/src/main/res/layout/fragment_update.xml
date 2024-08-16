@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Screens.Fragments.UpdateFragment">
 
     <FrameLayout
@@ -33,7 +34,7 @@
         app:tabIndicatorGravity="stretch"
         app:tabMode="fixed"
         app:tabSelectedTextColor="@color/white"
-        app:tabTextColor="@color/dark_blue">
+        app:tabTextColor="@color/red_black">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
@@ -49,7 +50,7 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         app:layout_constraintTop_toBottomOf="@id/tabLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -66,4 +67,4 @@
         <include layout="@layout/shimmer_update_match_fragment" />
     </com.facebook.shimmer.ShimmerFrameLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

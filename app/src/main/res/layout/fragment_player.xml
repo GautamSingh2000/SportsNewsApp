@@ -12,7 +12,6 @@
         android:layout_height="@dimen/_40sdp"
         android:layout_marginHorizontal="@dimen/_25sdp"
         android:layout_marginTop="@dimen/_10sdp"
-        android:background="@color/white"
         android:outlineAmbientShadowColor="@color/white"
         android:outlineSpotShadowColor="@color/white"
         app:cardCornerRadius="@dimen/_20sdp"
@@ -34,13 +33,15 @@
 
     </androidx.cardview.widget.CardView>
 
+
+<!--    filters    -->
     <RelativeLayout
         android:id="@+id/filter_ll"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/cardView6"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:visibility="gone">
+        android:layout_marginTop="@dimen/_10sdp">
 
         <LinearLayout
             android:id="@+id/ll0"
@@ -55,7 +56,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0.5dp"
                 android:layout_weight="0.5"
-                app:dividerColor="@color/white" />
+                app:dividerColor="@color/red_black" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -63,13 +64,13 @@
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:fontFamily="@font/fjalla_one"
                 android:text="Filters"
-                android:textColor="@color/white" />
+                android:textColor="@color/red_black" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:layout_width="0dp"
                 android:layout_height="0.5dp"
                 android:layout_weight="3"
-                app:dividerColor="@color/white" />
+                app:dividerColor="@color/red_black" />
         </LinearLayout>
 
         <LinearLayout
@@ -165,7 +166,7 @@
         </LinearLayout>
     </RelativeLayout>
 
-
+<!--search results -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/rv_ll"
         android:layout_width="wrap_content"

@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
         app:cardCornerRadius="0dp"
-        android:backgroundTint="@color/light_blue"
+        android:backgroundTint="#BF380E"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">

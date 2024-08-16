@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blue_gradel"
+    android:background="@drawable/red_gradel"
     tools:context=".Screens.Activity.MainActivity">
 
     <include
@@ -17,16 +17,17 @@
         android:layout_height="@dimen/_30sdp"
         android:layout_marginTop="@dimen/_5sdp"
         android:padding="@dimen/_6sdp"
+        android:visibility="gone"
         android:src="@drawable/back_btn"
-        android:visibility="gone" />
+        />
 
     <androidx.cardview.widget.CardView
+        android:visibility="gone"
         android:id="@+id/blurViewcard"
         android:layout_width="@dimen/_240sdp"
         android:layout_height="match_parent"
         android:layout_gravity="end"
         android:layout_marginEnd="-20dp"
-        android:visibility="gone"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="@dimen/_10sdp"
         app:cardElevation="20dp">
@@ -45,7 +46,7 @@
                 android:layout_marginTop="@dimen/_20sdp"
                 android:padding="@dimen/_5sdp"
                 android:src="@drawable/baseline_arrow_forward_ios_24"
-                android:tint="@color/dark_blue"></ImageView>
+                   android:tint="@color/little_dark_gray"></ImageView>
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profilepic"
@@ -108,7 +109,7 @@
                 android:padding="@dimen/_3sdp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/bellon"
-                android:tint="@color/dark_blue" />
+                  android:tint="@color/little_dark_gray"  />
 
             <com.google.android.material.switchmaterial.SwitchMaterial
                 android:id="@+id/switchMaterial"
@@ -147,7 +148,7 @@
                     android:layout_weight="1"
                     android:padding="@dimen/_3sdp"
                     android:src="@drawable/feedback"
-                    android:tint="@color/dark_blue" />
+                      android:tint="@color/little_dark_gray"  />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -163,6 +164,7 @@
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"
                     android:padding="@dimen/_5sdp"
+                      android:tint="@color/little_dark_gray"
                     android:src="@drawable/baseline_arrow_forward_ios_24" />
             </LinearLayout>
 
@@ -182,7 +184,7 @@
                     android:layout_weight="1"
                     android:padding="@dimen/_3sdp"
                     android:src="@drawable/shareapp"
-                    android:tint="@color/dark_blue" />
+                      android:tint="@color/little_dark_gray"  />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -198,6 +200,7 @@
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"
                     android:padding="@dimen/_5sdp"
+                      android:tint="@color/little_dark_gray"
                     android:src="@drawable/baseline_arrow_forward_ios_24" />
             </LinearLayout>
 
@@ -228,7 +231,7 @@
                     android:layout_weight="1"
                     android:padding="@dimen/_3sdp"
                     android:src="@drawable/terms"
-                    android:tint="@color/dark_blue" />
+                      android:tint="@color/little_dark_gray"  />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -244,6 +247,7 @@
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"
                     android:padding="@dimen/_5sdp"
+                      android:tint="@color/little_dark_gray"
                     android:src="@drawable/baseline_arrow_forward_ios_24" />
             </LinearLayout>
 
@@ -264,7 +268,7 @@
                     android:layout_weight="1"
                     android:padding="@dimen/_3sdp"
                     android:src="@drawable/aboutus"
-                    android:tint="@color/dark_blue" />
+                      android:tint="@color/little_dark_gray"  />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -280,6 +284,7 @@
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"
                     android:padding="@dimen/_5sdp"
+                      android:tint="@color/little_dark_gray"
                     android:src="@drawable/baseline_arrow_forward_ios_24" />
             </LinearLayout>
 
@@ -300,7 +305,7 @@
                     android:layout_weight="1"
                     android:padding="@dimen/_3sdp"
                     android:src="@drawable/help"
-                    android:tint="@color/dark_blue" />
+                      android:tint="@color/little_dark_gray" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -316,6 +321,7 @@
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"
                     android:padding="@dimen/_5sdp"
+                      android:tint="@color/little_dark_gray"
                     android:src="@drawable/baseline_arrow_forward_ios_24" />
             </LinearLayout>
         </RelativeLayout>
@@ -330,7 +336,7 @@
         android:elevation="@dimen/_10sdp"
         android:scaleType="centerCrop"
         android:translationZ="60dp"
-        app:lottie_rawRes="@raw/setting" />
+        app:lottie_rawRes="@raw/settings" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

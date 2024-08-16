@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@drawable/blue_gradel"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:showIn="@layout/cordinate_main_activity"
@@ -13,7 +12,8 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
         android:gravity="center"
         android:maxLines="1"
         android:elevation="@dimen/_10sdp"
@@ -28,7 +28,7 @@
         android:id="@+id/MainScreeFrameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/_45sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
@@ -54,10 +54,10 @@
             app:itemActiveIndicatorStyle="@null"
             app:itemIconSize="22dp"
             app:compatShadowEnabled="true"
-            app:itemIconTint="@color/dark_blue"
+            app:itemIconTint="@color/redmain"
             app:itemPaddingBottom="10.dp"
-            app:itemRippleColor="@color/light_blue"
-            app:itemTextColor="@color/dark_blue"
+            app:itemRippleColor="@color/lightred"
+            app:itemTextColor="@color/redmain"
             app:menu="@menu/bottom_navi_menu" />
     </androidx.cardview.widget.CardView>
 

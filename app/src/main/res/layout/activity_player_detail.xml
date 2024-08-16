@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/red_black"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_blue"
     tools:context=".Screens.Activity.PlayerDetailActivity">
 
     <include android:id="@+id/appbar" layout="@layout/component_app_bar"/>
@@ -204,7 +204,7 @@
                     android:layout_height="2dp"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_above="@id/materialDivider"
-                    app:dividerColor="@color/red"/>
+                    app:dividerColor="@color/lightred"/>
 
 
                 <androidx.core.widget.NestedScrollView
@@ -236,7 +236,7 @@
                             app:tabIndicatorGravity="stretch"
                             app:tabIndicatorHeight="0dp"
                             app:tabMode="fixed"
-                            app:tabRippleColor="@color/red"
+                            app:tabRippleColor="@color/lightred"
                             app:tabSelectedTextColor="@color/white">
 
                             <com.google.android.material.tabs.TabItem

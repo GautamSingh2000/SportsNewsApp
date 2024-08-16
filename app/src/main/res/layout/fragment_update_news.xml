@@ -9,29 +9,26 @@
     <androidx.cardview.widget.CardView
         android:visibility="gone"
         android:id="@+id/nodatafound"
-        android:layout_marginTop="@dimen/_100sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="@dimen/_100sdp"
         android:layout_height="@dimen/_100sdp"
-        app:cardCornerRadius="500dp">
+        app:cardCornerRadius="500dp"
+        app:layout_constraintBottom_toBottomOf="@+id/nestedScrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <ImageView
-            android:layout_gravity="center"
             android:layout_width="@dimen/_150sdp"
             android:layout_height="@dimen/_150sdp"
-            android:src="@drawable/no_data_found"
-            android:scaleType="centerCrop"/>
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/no_data_found" />
     </androidx.cardview.widget.CardView>
+
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView3"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollIndicators="none"
-            android:fadeScrollbars="true"
-            android:scrollbars="none">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -65,7 +62,6 @@
 
             </RelativeLayout>
 
-        </ScrollView>
     </androidx.core.widget.NestedScrollView>
 
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <com.google.android.material.card.MaterialCardView
+    app:strokeWidth="0dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,6 +10,7 @@
     android:paddingBottom="@dimen/_10sdp"
     app:cardBackgroundColor="@color/white"
     android:id="@+id/card"
+    app:cardElevation="@dimen/_5sdp"
     android:layout_margin="@dimen/_5sdp"
     app:contentPaddingBottom="@dimen/_5sdp">
 
@@ -99,7 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20 ov)"
-                android:textColor="@color/dark_blue"
+                android:textColor="@color/gray_red"
                 android:textSize="@dimen/_8ssp"
                 android:textStyle="bold"/>
 
@@ -176,7 +178,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="18 ov)"
-                android:textColor="@color/dark_blue"
+                android:textColor="@color/gray_red"
                 android:textSize="@dimen/_8ssp"
                 android:textStyle="bold"/>
 

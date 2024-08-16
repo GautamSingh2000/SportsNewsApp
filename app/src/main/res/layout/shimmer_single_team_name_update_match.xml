@@ -43,11 +43,11 @@
                 android:layout_width="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                app:cardBackgroundColor="@color/red"
+                app:cardBackgroundColor="@color/lightred"
                 app:cardCornerRadius="@dimen/_10sdp"
                 android:clickable="true"
                 android:focusable="true"
-                app:rippleColor="@color/red"
+                app:rippleColor="@color/lightred"
                 app:cardElevation="@dimen/_2sdp"
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:layout_height="wrap_content">

@@ -60,7 +60,7 @@
         android:id="@+id/search_hint_rc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginTop="40dp"
         android:layoutMode="opticalBounds"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

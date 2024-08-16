@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Screens.Activity.TrendingNewsActivity">
 
-   <include android:id="@+id/appbar" layout="@layout/component_app_bar"/>
-
-    <WebView
-        android:visibility="gone"
-        android:id="@+id/web_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
     <ImageView
         android:visibility="gone"
@@ -24,13 +18,172 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appbar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-<!--    <include-->
-<!--        layout="@layout/component_no_data_found"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/web_view"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/web_view"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/cardView4" />-->
+    <RelativeLayout
+        android:id="@+id/upperll"
+        android:background="@drawable/bottom_circularbox"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/news_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:src="@drawable/img"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/backbtn"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:rippleColor="@color/white"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_alignParentLeft="true"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_30sdp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/back_btn"
+                    android:tint="@color/light_gray" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/backbtn"
+            android:layout_alignBottom="@+id/backbtn"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toRightOf="@id/backbtn"
+            android:fontFamily="@font/rem"
+            android:gravity="center_vertical"
+            android:text="News Details"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:fontFamily="@font/fjalla_one"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="title"
+            android:textSize="@dimen/_13ssp" />
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        app:strokeWidth="1dp"
+        android:id="@+id/personll"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_below="@id/upperll"
+        app:strokeColor="@color/light_gray"
+        android:layout_width="wrap_content"
+        app:cardBackgroundColor="@color/transparent"
+        app:contentPadding="@dimen/_2sdp"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/src_image"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/person"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/src_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upperll"
+        android:gravity="center_vertical"
+        android:layout_alignBottom="@+id/personll"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_toRightOf="@id/personll"
+        android:fontFamily="@font/rem"
+        android:text="google"
+        android:textColor="@color/little_dark_gray"
+        android:textSize="@dimen/_11ssp" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        app:strokeWidth="1dp"
+        android:id="@+id/clockll"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_below="@id/upperll"
+        android:layout_toRightOf="@id/src_name"
+        app:cardBackgroundColor="@color/transparent"
+        app:strokeColor="@color/light_gray"
+        android:layout_width="wrap_content"
+        app:contentPadding="@dimen/_2sdp"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/clock"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/clock"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upperll"
+        android:layout_alignBottom="@+id/clockll"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@id/clockll"
+        android:fontFamily="@font/rem"
+        android:text="20/12/2000"
+        android:textColor="@color/little_dark_gray"
+        android:textSize="@dimen/_10ssp" />
+
+    <TextView
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="body"
+        android:layout_below="@id/clockll"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/linkll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Source :- "
+        android:layout_below="@id/body"
+        android:textSize="@dimen/_11ssp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:layout_below="@id/body"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_toRightOf="@id/linkll"
+        android:textSize="@dimen/_11ssp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:textColor="@color/light_blue"/>
+
+</RelativeLayout>

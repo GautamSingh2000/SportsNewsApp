@@ -1,5 +1,7 @@
 package com.mindgeeks.sportsnews.Model.ResponseModel
 
+import android.os.Parcel
+import android.os.Parcelable
 import com.mindgeeks.sportsnews.R
 
 data class HomeFragmentResponse(
@@ -36,17 +38,52 @@ data class LiveMatche(
     val type: String,
     val venue: Venue
 )
-
 data class TrendingNew(
     val author: String,
     val content: String,
-    val desc: String,
+    val desc : String?,
     val image: String,
     val name: String,
     val publishedAt: String,
     val title: String,
     val url: String
-)
+) : Parcelable {
+    constructor(parcel: Parcel) : this(
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readString().toString()
+    )
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(author)
+        parcel.writeString(content)
+        parcel.writeString(desc)
+        parcel.writeString(image)
+        parcel.writeString(name)
+        parcel.writeString(publishedAt)
+        parcel.writeString(title)
+        parcel.writeString(url)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<TrendingNew> {
+        override fun createFromParcel(parcel: Parcel): TrendingNew {
+            return TrendingNew(parcel)
+        }
+
+        override fun newArray(size: Int): Array<TrendingNew?> {
+            return arrayOfNulls(size)
+        }
+    }
+}
 
 data class UpcomingMatche(
     val competition_id: String,

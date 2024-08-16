@@ -84,7 +84,7 @@
         android:elevation="@dimen/_10sdp"
         android:shadowColor="@color/little_dark_gray"
         android:layout_marginTop="@dimen/_20sdp"
-        android:backgroundTint="@color/dark_blue"
+        android:backgroundTint="@color/red_black"
         android:paddingVertical="@dimen/_10sdp"
         android:paddingHorizontal="@dimen/_50sdp"
         android:text="Login"/>

@@ -114,32 +114,6 @@ data class TeamScore(
     val short_name: String,
     val status: Int,
 ): Parcelable
-//data class Teamb(
-//    val batsmen: List<Batsmen>,
-//    val batting_team_id: Int,
-//    val bowlers: List<Bowler>,
-//    val current_partnership: CurrentPartnershipX,
-//    val did_not_bat: List<DidNotBat>,
-//    val equations: Equations,
-//    val extra_runs: ExtraRuns,
-//    val fielder: List<Fielder>,
-//    val fielding_team_id: Int,
-//    val fows: List<Fow>,
-//    val iid: Int,
-//    val issuperover: String,
-//    val last_wicket: LastWicket,
-//    val max_over: String,
-//    val name: String,
-//    val number: Int,
-//    val powerplay: PowerplayX,
-//    val result: Int,
-//    val review: ReviewX,
-//    val scores: String,
-//    val scores_full: String,
-//    val short_name: String,
-//    val status: Int,
-//    val target: String
-//)
 
 @Parcelize
 data class MatchData(

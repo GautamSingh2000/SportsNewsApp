@@ -9,11 +9,12 @@
     android:gravity="center">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="@dimen/_150sdp"
-        android:layout_height="@dimen/_150sdp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
         app:cardCornerRadius="@dimen/_500sdp"
         app:cardElevation="@dimen/_3sdp">
         <ImageView
+            android:layout_gravity="center"
             android:scaleType="centerCrop"
             android:layout_width="@dimen/_150sdp"
             android:layout_height="@dimen/_150sdp"

@@ -36,10 +36,10 @@ class CalendarAdapter(
                 pos = -1
                 calendarDay.setTextColor(itemView.context.getColor(R.color.white))
                 calendarDate.setTextColor(itemView.context.getColor(R.color.white))
-                cardView.setCardBackgroundColor(itemView.context.getColor(R.color.dark_blue))
+                cardView.setCardBackgroundColor(itemView.context.getColor(R.color.peach))
             } else {
-                calendarDay.setTextColor(itemView.context.getColor(R.color.light_blue))
-                calendarDate.setTextColor(itemView.context.getColor(R.color.light_blue))
+                calendarDay.setTextColor(itemView.context.getColor(R.color.red_black))
+                calendarDate.setTextColor(itemView.context.getColor(R.color.red_black))
                 cardView.setCardBackgroundColor(itemView.context.getColor(R.color.white))
             }
 

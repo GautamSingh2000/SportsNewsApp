@@ -2,13 +2,19 @@ package com.mindgeeks.sportsnews.Adapter
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.browser.customtabs.CustomTabColorSchemeParams
+import androidx.browser.customtabs.CustomTabsIntent
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.mindgeeks.sportsnews.Model.ResponseModel.New
+import com.mindgeeks.sportsnews.Model.ResponseModel.TrendingNew
 import com.mindgeeks.sportsnews.R
 import com.mindgeeks.sportsnews.Screens.Activity.TrendingNewsActivity
 import com.squareup.picasso.Picasso
@@ -42,13 +48,34 @@ class UpdateNewsAdapter(val context : Context, val list: List<New>): RecyclerVie
        if(!data.image.isNullOrEmpty()) Picasso.get().load(data.image).placeholder(R.drawable.img).into(holder.image)
 
         holder.readmore.setOnClickListener{
+            val news = TrendingNew(
+                author = data.author,
+                content = data.content.toString(),
+                desc = data.desc,
+                image = data.image,
+                name = data.name,
+                publishedAt = data.publishedAt,
+                title = data.title,
+                url = data.url
+            )
             val intent = Intent(context, TrendingNewsActivity::class.java)
-            intent.putExtra("url",data.url)
+            intent.putExtra("url",news)
             context.startActivity(intent)
         }
   holder.moreImage.setOnClickListener{
+      val news = TrendingNew(
+          author = data.author,
+          content = data.content.toString(),
+          desc = data.desc,
+          image = data.image,
+          name = data.name,
+          publishedAt = data.publishedAt,
+          title = data.title,
+          url = data.url
+      )
+
             val intent = Intent(context, TrendingNewsActivity::class.java)
-            intent.putExtra("url",data.url)
+            intent.putExtra("url",news)
             context.startActivity(intent)
         }
 
@@ -63,6 +90,7 @@ class UpdateNewsAdapter(val context : Context, val list: List<New>): RecyclerVie
                 context.startActivity(chooser)
             }
         }
+
         holder.share.setOnClickListener {
             val shareIntent = Intent().apply {
                 action = Intent.ACTION_SEND
@@ -73,6 +101,41 @@ class UpdateNewsAdapter(val context : Context, val list: List<New>): RecyclerVie
             if (shareIntent.resolveActivity(context.packageManager) != null) {
                 context.startActivity(chooser)
             }
+        }
+    }
+
+    fun openTab(url: String) {
+        try {
+            val builder = CustomTabsIntent.Builder()
+
+            // to set the toolbar color use CustomTabColorSchemeParams
+            // since CustomTabsIntent.Builder().setToolBarColor() is deprecated
+
+            val params = CustomTabColorSchemeParams.Builder()
+            params.setToolbarColor(ContextCompat.getColor(context, R.color.gradient_red))
+            builder.setDefaultColorSchemeParams(params.build())
+            // shows the title of web-page in toolbar
+            builder.setShowTitle(true)
+
+            // setShareState(CustomTabsIntent.SHARE_STATE_ON) will add a menu to share the web-page
+            builder.setShareState(CustomTabsIntent.SHARE_STATE_ON)
+
+            // To modify the close button, use
+            // builder.setCloseButtonIcon(bitmap)
+
+            // to set weather instant apps is enabled for the custom tab or not, use
+            builder.setInstantAppsEnabled(true)
+
+            //  To use animations use -
+            //  builder.setStartAnimations(context, android.R.anim.start_in_anim, android.R.anim.start_out_anim)
+            //  builder.setExitAnimations(context, android.R.anim.exit_in_anim, android.R.anim.exit_out_anim)
+            val customBuilder = builder.build()
+            customBuilder.intent.setPackage("com.android.chrome")
+            customBuilder.launchUrl(context, Uri.parse(url))
+        }
+        catch (e:Exception)
+        {
+            Toast.makeText(context,e.message, Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:text="Cricket Analysis"
             android:fontFamily="@font/rem"
-            android:textColor="@color/dark_blue"
+            android:textColor="@color/red_black"
             android:layout_below="@id/cv"
             android:layout_margin="10dp"/>
 

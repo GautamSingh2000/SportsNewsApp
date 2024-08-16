@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/background"
     android:backgroundTint="@color/white"
     tools:context=".Screens.Fragments.LiveMatchFragment">
 
     <include
+        android:visibility="gone"
         android:id="@+id/shimmer_mainll"
         layout="@layout/shimmer_live_match_fragment_layout"/>
 
 
     <RelativeLayout
-        android:visibility="gone"
         android:id="@+id/mainll"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -32,7 +32,7 @@
             android:layout_height="@dimen/_45sdp"
             android:layout_below="@+id/livematchcv"
             android:layout_marginHorizontal="@dimen/_5sdp"
-            android:layout_marginTop="-5dp"
+            android:layout_marginTop="-3dp"
             android:background="@drawable/grayroundedbox"
             android:elevation="@dimen/_5sdp"
             app:tabGravity="fill"
@@ -43,7 +43,7 @@
             app:tabIndicatorGravity="stretch"
             app:tabIndicatorHeight="0dp"
             app:tabMode="fixed"
-            app:tabRippleColor="@color/red"
+            app:tabRippleColor="@color/lightred"
             app:tabSelectedTextColor="@color/white">
 
             <com.google.android.material.tabs.TabItem
@@ -51,14 +51,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:foregroundGravity="center"
-                android:text="Squad"></com.google.android.material.tabs.TabItem>
+                android:text="Squad"/>
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:foregroundGravity="center"
-                android:text="Score Card"></com.google.android.material.tabs.TabItem>
+                android:text="Score Card"/>
 
         </com.google.android.material.tabs.TabLayout>
 
@@ -67,8 +67,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/tabll"
-            android:layout_marginHorizontal="@dimen/_5sdp"
-            android:layout_marginTop="-5dp"
             android:background="@color/white" />
     </RelativeLayout>
 </RelativeLayout>

@@ -1,104 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:backgroundTint="@color/white"
-    android:layout_marginTop="@dimen/_10sdp"
-    android:padding="@dimen/_10sdp"
-    tools:context=".Screens.Fragments.ScoreCardFragment">
-
-    <androidx.core.widget.NestedScrollView
+    app:cardElevation="0dp"
+    android:layout_marginVertical="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:layout_height="match_parent">
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none">
+        android:background="@color/white"
+        android:padding="@dimen/_10sdp"
+        tools:context=".Screens.Fragments.ScoreCardFragment">
 
-        <RelativeLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:scrollbars="none">
 
-            <TextView
-                android:id="@+id/team_A_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/rem"
-                android:text="IND"
-                android:textFontWeight="200"
-                android:textSize="@dimen/_15ssp" />
-
-            <TextView
-                android:id="@+id/team_A_score"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:fontFamily="@font/rem"
-                android:text="10/9"
-                android:textFontWeight="200"
-                android:textSize="@dimen/_15ssp" />
-
-
-
-            <include
-                android:id="@+id/team_A_batting"
-                layout="@layout/single_score_board"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/team_A_score"
-                android:layout_marginTop="@dimen/_5sdp" />
+                android:layout_height="match_parent">
 
-            <include
-                android:id="@+id/team_A_balling"
-                layout="@layout/single_score_board"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/team_A_batting"
-                android:layout_marginTop="@dimen/_15sdp" />
+                <TextView
+                    android:id="@+id/team_A_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rem"
+                    android:text="IND"
+                    android:textColor="@color/red_black"
+                    android:textFontWeight="200"
+                    android:textSize="@dimen/_15ssp" />
 
-            <TextView
-                android:id="@+id/team_B_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/team_A_balling"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:fontFamily="@font/rem"
-                android:text="RSA"
-                android:textFontWeight="200"
-                android:textSize="@dimen/_15ssp" />
+                <TextView
+                    android:id="@+id/team_A_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/rem"
+                    android:text="10/9"
+                    android:textColor="@color/red_black"
+                    android:textFontWeight="200"
+                    android:textSize="@dimen/_15ssp" />
 
-            <TextView
-                android:id="@+id/team_B_score"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/team_A_balling"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:fontFamily="@font/rem"
-                android:text=" -- "
-                android:textFontWeight="200"
-                android:textSize="@dimen/_15ssp" />
 
-            <include
-                android:id="@+id/team_B_batting"
-                layout="@layout/single_score_board"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/team_B_name"
-                android:layout_marginTop="@dimen/_5sdp" />
 
-            <include
-                android:id="@+id/team_B_balling"
-                layout="@layout/single_score_board"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/team_B_batting"
-                android:layout_marginTop="@dimen/_15sdp" />
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/_75sdp"
-                android:background="#00DDDADA"
-                android:layout_below="@id/team_B_balling"/>
+                <include
+                    android:id="@+id/team_A_batting"
+                    layout="@layout/single_score_board"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/team_A_score"
+                    android:layout_marginTop="@dimen/_5sdp" />
 
-        </RelativeLayout>
-    </androidx.core.widget.NestedScrollView>
-</RelativeLayout>
+                <include
+                    android:id="@+id/team_A_balling"
+                    layout="@layout/single_score_board"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/team_A_batting"
+                    android:layout_marginTop="@dimen/_15sdp" />
+
+                <TextView
+                    android:id="@+id/team_B_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/team_A_balling"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/rem"
+                    android:textColor="@color/red_black"
+                    android:text="RSA"
+                    android:textFontWeight="200"
+                    android:textSize="@dimen/_15ssp" />
+
+                <TextView
+                    android:id="@+id/team_B_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/team_A_balling"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/rem"
+                    android:textColor="@color/red_black"
+                    android:text=" -- "
+                    android:textFontWeight="200"
+                    android:textSize="@dimen/_15ssp" />
+
+                <include
+                    android:id="@+id/team_B_batting"
+                    layout="@layout/single_score_board"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/team_B_name"
+                    android:layout_marginTop="@dimen/_5sdp" />
+
+                <include
+                    android:id="@+id/team_B_balling"
+                    layout="@layout/single_score_board"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/team_B_batting"
+                    android:layout_marginTop="@dimen/_15sdp" />
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_75sdp"
+                    android:background="#00DDDADA"
+                    android:layout_below="@id/team_B_balling"/>
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

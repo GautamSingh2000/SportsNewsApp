@@ -62,6 +62,7 @@ import com.mindgeeks.sportsnews.Model.RequestModels.GoogleSigninRequest
 import com.mindgeeks.sportsnews.R
 import com.mindgeeks.sportsnews.Screens.Activity.states.SignInState
 import com.mindgeeks.sportsnews.Screens.Activity.ui.theme.BatBallTheme
+import com.mindgeeks.sportsnews.Screens.Activity.ui.theme.gray
 import com.mindgeeks.sportsnews.Screens.Activity.ui.theme.red
 import com.mindgeeks.sportsnews.Screens.Activity.ui.theme.red_black
 import com.mindgeeks.sportsnews.Screens.Activity.ui.theme.red_with_white
@@ -234,7 +235,7 @@ fun MainComponent(
                 modifier = Modifier.padding(horizontal = 25.dp),
                 text = "Unleash the Power of the Pitch: Live Cricket News at Your Fingertips!",
                 style = TextStyle(
-                    color = Color.Gray,
+                    color = gray,
                     fontWeight = FontWeight.W500,
                     fontSize = 29.sp,
                     textAlign = TextAlign.Start,
@@ -263,7 +264,7 @@ fun MainComponent(
                         },
                     ),
                 shape = RoundedCornerShape(10.dp),
-                colors = CardDefaults.cardColors(red_with_white),
+                colors = CardDefaults.cardColors(red_black),
                 elevation = CardDefaults.cardElevation(10.dp)
             ) {
                 Row(
@@ -272,7 +273,7 @@ fun MainComponent(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Image(
-                        painter = painterResource(id = R.drawable.icons8_google_48),
+                        painter = painterResource(id = R.drawable.white_google_logo),
                         contentDescription = "google_icon",
                         modifier = Modifier.size(30.dp)
                     )
@@ -282,7 +283,7 @@ fun MainComponent(
                             .padding(vertical = 10.dp),
                         text = "Login with Google",
                         style = TextStyle(
-                            color = Color.Black,
+                            color = Color.White,
                             fontSize = 15.sp,
                             textAlign = TextAlign.Center,
                             fontFamily = FontFamily(Font(R.font.rem))
@@ -303,7 +304,7 @@ fun MainComponent(
                     },
                 text = "Login with Email",
                 style = TextStyle(
-                    color = Color.White,
+                    color = red_with_white,
                     fontSize = 15.sp,
                     textAlign = TextAlign.Center,
                     fontWeight = FontWeight.W300)
@@ -311,9 +312,7 @@ fun MainComponent(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 50.dp),
- 
- 
+                    .padding(top = 40.dp),
                     verticalAlignment = Alignment.Bottom,
   
                 horizontalArrangement = Arrangement.SpaceEvenly
@@ -329,7 +328,7 @@ fun MainComponent(
                     },
                     text = "Private Policy",
                     style = TextStyle(
-                        color = Color.White,
+                        color = red_black,
                         fontWeight = FontWeight.W500
                     )
                 )
@@ -343,7 +342,7 @@ fun MainComponent(
                     },
                     text = "Terms & Condition",
                     style = TextStyle(
-                        color = Color.White,
+                        color = red_black,
                         fontWeight = FontWeight.W500
                     )
                 )

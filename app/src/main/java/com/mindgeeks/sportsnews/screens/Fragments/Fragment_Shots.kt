@@ -7,7 +7,7 @@
     import android.view.ViewGroup
     import android.widget.TextView
     import androidx.media3.exoplayer.ExoPlayer
-    import com.mindgeeks.sportsnews.adapters.adapter_Video
+    import com.mindgeeks.sportsnews.adapters.adapter_Shorts
     import com.mindgeeks.sportsnews.models.OtherModel.video_Item
     import com.mindgeeks.sportsnews.R
     import com.mindgeeks.sportsnews.databinding.FragmentShotsBinding
@@ -16,7 +16,7 @@
         private lateinit var player: ExoPlayer
 
         lateinit var binding: FragmentShotsBinding
-        private var videoPagerAdapter: adapter_Video? = null
+        private var videoPagerAdapter: adapter_Shorts? = null
 
         override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -57,7 +57,7 @@
                 video_Item("https://mindgeeksind.blr1.digitaloceanspaces.com/rrta58k0b762jqw6t8wocv7nfo7h")
             )
 
-            videoPagerAdapter = adapter_Video(requireContext(), videoList)
+            videoPagerAdapter = adapter_Shorts(requireContext(), videoList)
             binding.shortRc.adapter = videoPagerAdapter
 
             return binding.root

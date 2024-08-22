@@ -48,6 +48,7 @@
         android:id="@+id/playbtn"
         android:layout_width="@dimen/_50sdp"
         android:layout_height="@dimen/_50sdp"
+        android:visibility="gone"
         android:alpha="0.7"
         android:src="@drawable/play"
         android:tint="@color/white"

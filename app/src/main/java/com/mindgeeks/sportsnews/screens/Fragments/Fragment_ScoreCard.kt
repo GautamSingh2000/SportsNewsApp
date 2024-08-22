@@ -32,8 +32,8 @@ class Fragment_ScoreCard : Fragment() {
                     binding.teamAName.text = data.matchData.teama_short_name
                     binding.teamBName.text = data.matchData.teamb_short_name
 
-                    binding.teamAScore.text = data.matchData.teama_scores
-                    binding.teamBScore.text = data.matchData.teamb_scores
+                    binding.teamAScore.text = extractTextAfterAmpersand(data.matchData.teama_scores)
+                    binding.teamBScore.text = extractTextAfterAmpersand(data.matchData.teamb_scores)
 
                     binding.teamABatting.Totalh2.text = data.teamABattingTotalScore.total_runs.toString()
                     binding.teamABatting.Totalh3.text = data.teamABattingTotalScore.total_balls.toString()
@@ -108,5 +108,13 @@ class Fragment_ScoreCard : Fragment() {
             integerPartAsString
         }
         return "$firstThreeChars.00"
+    }
+
+    fun extractTextAfterAmpersand(input: String): String {
+        return if (input.contains("&")) {
+            input.substringAfter("&").trim()
+        } else {
+            input
+        }
     }
 }

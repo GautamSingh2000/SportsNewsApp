@@ -18,7 +18,7 @@ import com.mindgeeks.sportsnews.models.OtherModel.video_Item
 import com.mindgeeks.sportsnews.R
 
 
-class adapter_Video(val context: Context, private val videoList: List<video_Item>) : RecyclerView.Adapter<adapter_Video.VideoViewHolder>() {
+class adapter_Shorts(val context: Context, private val videoList: List<video_Item>) : RecyclerView.Adapter<adapter_Shorts.VideoViewHolder>() {
 
     inner class VideoViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val playerView: PlayerView = view.findViewById(R.id.videoView2)

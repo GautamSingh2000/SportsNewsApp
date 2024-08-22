@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
@@ -61,6 +62,7 @@ class Activity_Main : AppCompatActivity() {
         context = this
         viewModelMain = ViewModel_Main(context)
         sessionManager = SessionManager(context)
+        fragmentManager = supportFragmentManager
 
         backStackChangedListener = FragmentManager.OnBackStackChangedListener {
             val backStackCount = fragmentManager.backStackEntryCount
@@ -273,20 +275,28 @@ class Activity_Main : AppCompatActivity() {
         fragmentManager.removeOnBackStackChangedListener(backStackChangedListener)
     }
 
+    private var doubleBackToExitPressedOnce = false
     override fun onBackPressed() {
-        if (BackStackCount == 0 && lottiState) {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed()
+            return
+        }
+
+        this.doubleBackToExitPressedOnce = true
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show()
+
+        Handler(Looper.getMainLooper()).postDelayed(Runnable { doubleBackToExitPressedOnce = false }, 2000)
+
+        if (lottiState) {
             SideMenu()
         } else {
             binding.backBtn.visibility = View.GONE
             super.onBackPressed()
         }
-
-
     }
 
     fun Replace(fragment: Fragment, action: String) {
         binding.backBtn.visibility = View.GONE
-        fragmentManager = supportFragmentManager
         fragmentManager.popBackStack()
 
         if (action.equals("current_iteam")) {
@@ -307,6 +317,7 @@ class Activity_Main : AppCompatActivity() {
     fun SideMenu() {
         Log.e("Mainactivity", "lottiState is " + lottiState)
         if (lottiState) {
+            binding.lottieView.isClickable = true
             lottiState = false
             binding.lottieView.apply {
                 playAnimation()
@@ -323,6 +334,7 @@ class Activity_Main : AppCompatActivity() {
                 visibility = View.GONE
             }
 
+
             binding.mainlayout.blurView.apply {
                 startAnimation(animation2)
                 isClickable = false
@@ -334,6 +346,7 @@ class Activity_Main : AppCompatActivity() {
             Log.e("Mainactivity", "now lottiState is " + lottiState)
         } else {
 
+            binding.lottieView.isClickable = false
             binding.lottieView.playAnimation()
             lottiState = true
             val animation1: Animation =

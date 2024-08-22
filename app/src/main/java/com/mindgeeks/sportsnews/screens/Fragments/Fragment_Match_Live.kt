@@ -106,9 +106,7 @@ class Fragment_Match_Live : Fragment() {
                     binding.livematchcv.teamOneName.text = "${it.matchData.teama_name}"
                     binding.livematchcv.teamTwoName.text = "${it.matchData.teamb_name}"
                     try {
-                        if (it.matchData.teama_scores.equals("") || it.matchData.teama_scores.equals(
-                                ""
-                            )
+                        if (it.matchData.teama_scores.equals("") || it.matchData.teama_scores.equals("")
                         ) {
                             binding.livematchcv.teamOneRuns.text = " -- "
                             binding.livematchcv.teamOneOvers.text = " -- "

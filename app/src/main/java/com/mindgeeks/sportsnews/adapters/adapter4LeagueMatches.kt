@@ -71,10 +71,11 @@ class adapter4LeagueMatches(
                 next = true
                 holder.TeamA.text = data.teama.name
                 holder.TeamB.text = data.teamb.name
-                holder.runTeamA.text = data.teama.scores
-                holder.runTeamB.text = data.teamb.scores
-                holder.teamAOver.text = " ( ${data.teama.overs} )"
-                holder.teamBOver.text = " ( ${data.teamb.overs} )"
+                holder.runTeamA.text = extractTextAfterAmpersand(data.teama.scores)
+                holder.runTeamB.text = extractTextAfterAmpersand(data.teamb.scores)
+
+                holder.teamAOver.text = " ( ${extractTextAfterAmpersand(data.teama.overs)} ov )"
+                holder.teamBOver.text = " ( ${extractTextAfterAmpersand(data.teamb.overs)} ov )"
                 if (data.winningTeam.equals("Team A")) {
                     holder.winLogoA.visibility = View.VISIBLE
                 }
@@ -106,4 +107,13 @@ class adapter4LeagueMatches(
             }
         }
     }
+
+    fun extractTextAfterAmpersand(input: String): String {
+        return if (input.contains("&")) {
+            input.substringAfter("&").trim()
+        } else {
+           input
+        }
+    }
+
 }

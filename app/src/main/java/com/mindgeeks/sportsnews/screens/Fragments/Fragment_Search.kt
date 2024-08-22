@@ -45,6 +45,12 @@ class Fragment_Search : Fragment() {
             showSoftKeyboard(binding.searchView)
         }
 
+        binding.lastsearchCv.setOnClickListener {
+            if(!S_query.equals("")) {
+                binding.searchView.setQuery(S_query,true)
+                GetResult(S_query.trim())
+            }
+        }
 
         binding.searchView.findViewById<View>(androidx.appcompat.R.id.search_close_btn)
             ?.setOnClickListener {
@@ -70,7 +76,7 @@ class Fragment_Search : Fragment() {
             Log.d("Clicked", "Description: $description")
             S_query = description
             binding.searchView.setQuery(description.trim(), true)
-//            GetResult(description.trim())
+            GetResult(description.trim())
         }
         binding.searchHintRc.adapter?.notifyDataSetChanged()
     }

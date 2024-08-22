@@ -140,13 +140,14 @@
             app:layout_constraintBottom_toBottomOf="@+id/teamTwologo"
             app:layout_constraintStart_toEndOf="@+id/teamTwologo"
             app:layout_constraintTop_toTopOf="@+id/teamTwologo" />
+
         <ImageView
-            android:id="@+id/winIconB"
             android:visibility="gone"
+            android:id="@+id/winIconB"
             android:layout_width="@dimen/_25sdp"
             android:layout_height="@dimen/_25sdp"
-            android:layout_marginBottom="13dp"
             android:src="@drawable/trophy"
+            android:layout_marginStart="@dimen/_10sdp"
             app:layout_constraintBottom_toBottomOf="@+id/teamTwologo"
             app:layout_constraintStart_toEndOf="@+id/teamB"
             app:layout_constraintTop_toTopOf="@+id/teamTwologo" />

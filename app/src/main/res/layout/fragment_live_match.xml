@@ -1,73 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    android:backgroundTint="@color/white"
-    tools:context=".Screens.Fragments.LiveMatchFragment">
-
-    <include
-        android:visibility="gone"
-        android:id="@+id/shimmer_mainll"
-        layout="@layout/shimmer_live_match_fragment_layout"/>
+    android:id="@+id/refresh">
 
 
     <RelativeLayout
-        android:id="@+id/mainll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@color/background"
+        android:backgroundTint="@color/white"
+        tools:context=".screens.Fragments.Fragment_Match_Live">
 
         <include
-            android:id="@+id/livematchcv"
-            layout="@layout/single_live_match_fixed_height"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_7sdp" />
+            android:visibility="gone"
+            android:id="@+id/shimmer_mainll"
+            layout="@layout/shimmer_live_match_fragment_layout"/>
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabll"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
-            android:layout_below="@+id/livematchcv"
-            android:layout_marginHorizontal="@dimen/_5sdp"
-            android:layout_marginTop="-3dp"
-            android:background="@drawable/grayroundedbox"
-            android:elevation="@dimen/_5sdp"
-            app:tabGravity="fill"
-            app:tabIndicator="@drawable/redbox"
-            app:tabIndicatorAnimationMode="elastic"
-            app:tabIndicatorColor="@null"
-            app:tabIndicatorFullWidth="true"
-            app:tabIndicatorGravity="stretch"
-            app:tabIndicatorHeight="0dp"
-            app:tabMode="fixed"
-            app:tabRippleColor="@color/lightred"
-            app:tabSelectedTextColor="@color/white">
 
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="match_parent"
+        <RelativeLayout
+            android:id="@+id/mainll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/livematchcv"
+                layout="@layout/single_live_match_fixed_height"
+                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:foregroundGravity="center"
-                android:text="Squad"/>
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
 
-            <com.google.android.material.tabs.TabItem
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabll"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:foregroundGravity="center"
-                android:text="Score Card"/>
+                android:layout_height="@dimen/_45sdp"
+                android:layout_below="@+id/livematchcv"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="-3dp"
+                android:background="@drawable/grayroundedbox"
+                android:elevation="@dimen/_5sdp"
+                app:tabGravity="fill"
+                app:tabIndicator="@drawable/redbox"
+                app:tabIndicatorAnimationMode="elastic"
+                app:tabIndicatorColor="@null"
+                app:tabIndicatorFullWidth="true"
+                app:tabIndicatorGravity="stretch"
+                app:tabIndicatorHeight="0dp"
+                app:tabMode="fixed"
+                app:tabRippleColor="@color/lightred"
+                app:tabSelectedTextColor="@color/white">
 
-        </com.google.android.material.tabs.TabLayout>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="center"
+                    android:text="Squad"/>
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/tabll"
-            android:background="@color/white" />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="center"
+                    android:text="Score Card"/>
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tabll"
+                android:background="@color/white" />
+        </RelativeLayout>
     </RelativeLayout>
-</RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_marginBottom="@dimen/_10sdp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Screens.Fragments.HomeFragment">
+    tools:context=".screens.Fragments.Fragment_Home">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/uper_card"

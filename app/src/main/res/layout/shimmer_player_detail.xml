@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/red_black"
-    tools:context=".Screens.Activity.PlayerDetailActivity">
+    tools:context=".screens.Activity.Activity_Player_Detail">
 
     <RelativeLayout
         android:id="@+id/firstll"
@@ -195,7 +195,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:context=".Screens.Fragments.BattingSatsFragment">
+                    tools:context=".screens.Fragments.Fragment_BattingSats">
 
 
                     <com.google.android.material.tabs.TabLayout

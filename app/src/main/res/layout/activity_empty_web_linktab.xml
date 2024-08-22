@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Screens.Activity.Empty_webLinktab">
+    tools:context=".screens.Activity.Empty_webLinktab">
 
     <include
         android:id="@+id/aoobar"

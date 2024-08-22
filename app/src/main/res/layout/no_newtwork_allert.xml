@@ -41,7 +41,7 @@
         android:fontFamily="@font/signika_medium"
         android:text="Retry"
         android:textColor="@color/white"
-       android:background="@drawable/blue_rounded_box"
+       android:background="@drawable/red_rounded_box"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/textView22"
         app:layout_constraintStart_toStartOf="@+id/textView22"

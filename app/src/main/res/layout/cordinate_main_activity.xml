@@ -5,21 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/red_gradel"
-    tools:context=".Screens.Activity.MainActivity">
+    tools:context=".screens.Activity.Activity_Main">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="@dimen/_27sdp"
+        android:layout_height="@dimen/_27sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:padding="@dimen/_6sdp"
+        android:visibility="gone"
+        android:translationZ="0dp"
+        android:src="@drawable/back_btn"
+        />
 
     <include
         android:id="@+id/mainlayout"
         layout="@layout/activity_main" />
-
-    <ImageView
-        android:id="@+id/back_btn"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:padding="@dimen/_6sdp"
-        android:visibility="gone"
-        android:src="@drawable/back_btn"
-        />
 
     <androidx.cardview.widget.CardView
         android:visibility="gone"
@@ -329,10 +330,10 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie_view"
-        android:layout_width="150dp"
+        android:layout_width="100dp"
         android:layout_height="60dp"
         android:layout_gravity="end"
-        android:layout_marginRight="-30dp"
+        android:layout_marginRight="0dp"
         android:elevation="@dimen/_10sdp"
         android:scaleType="centerCrop"
         android:translationZ="60dp"

@@ -32,50 +32,44 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".Screens.Activity.Empty_webLinktab"
+            android:name=".screens.Activity.Empty_webLinktab"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".Screens.Activity.LoginWithEmailActivity"
+            android:name=".screens.Activity.Activity_Login_With_Email"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".Screens.Activity.PlayerDetailActivity"
+            android:name=".screens.Activity.Activity_Player_Detail"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".Screens.Activity.SignInActivity"
+            android:name=".screens.Activity.SignInActivity"
             android:screenOrientation="portrait"
             android:exported="false"
             android:label="@string/title_activity_sign_in"
             android:theme="@style/Theme.BatBall" />
         <activity
-            android:name=".Screens.Activity.ProfileActivity"
-            android:screenOrientation="portrait"
-            android:exported="false"
-            android:label="@string/title_activity_profile"
-            android:theme="@style/Theme.BatBall" />
-        <activity
-            android:name=".Screens.Activity.MatchrDetailActivity"
+            android:name=".screens.Activity.MatchDetailActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".Screens.Activity.LeagueActivity"
+            android:name=".screens.Activity.Activity_League"
             android:screenOrientation="portrait"
             android:exported="false"
             android:label="@string/title_activity_league"
             android:theme="@style/Theme.BatBall" />
         <activity
-            android:name=".Screens.Activity.TrendingNewsActivity"
+            android:name=".screens.Activity.TrendingNewsActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".Screens.Activity.MainActivity"
+            android:name=".screens.Activity.Activity_Main"
             android:screenOrientation="portrait"
             android:exported="true"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".Screens.Activity.SplashScreen"
+            android:name=".screens.Activity.Activity_Splash_Screen"
             android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>

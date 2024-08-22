@@ -1,119 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refresh"
+    app:swipeRefreshLayoutProgressSpinnerBackgroundColor="@color/red_black"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Screens.Fragments.HomeFragment">
+    tools:context=".screens.Fragments.Fragment_Home">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-           >
-
             <RelativeLayout
-                android:visibility="gone"
-                android:id="@+id/home_Fragment_mainLl"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-              >
+                android:layout_height="match_parent">
 
-                <androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/liveCardView"
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/home_Fragment_mainLl"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="20dp" />
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/text0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/liveCardView"
-                    android:layout_alignStart="@+id/liveCardView"
-                    android:layout_marginHorizontal="@dimen/_15sdp"
-                    android:layout_marginTop="-20dp"
-                    android:fontFamily="@font/rem"
-                    android:text="Top Cricket League"
-                    android:textColor="@color/black"
-                    android:textSize="17sp" />
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/liveCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="20dp" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/topLeagueRv"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_80sdp"
-                    android:layout_below="@id/text0"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:orientation="horizontal"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                    <TextView
+                        android:id="@+id/text0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/liveCardView"
+                        android:layout_alignStart="@+id/liveCardView"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="-20dp"
+                        android:fontFamily="@font/rem"
+                        android:text="Top Cricket League"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
 
-                <TextView
-                    android:id="@+id/text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/topLeagueRv"
-                    android:layout_alignStart="@+id/liveCardView"
-                    android:layout_marginHorizontal="@dimen/_15sdp"
-                    android:layout_marginTop="1dp"
-                    android:fontFamily="@font/rem"
-                    android:text="Upcoming Matches"
-                    android:textColor="@color/black"
-                    android:textSize="17sp" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/topLeagueRv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_below="@id/text0"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-
-                <androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/rc"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/text"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="@dimen/_10sdp"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="30dp"/>
-
-                <TextView
-                    android:id="@+id/text2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/rc"
-                    android:layout_alignStart="@+id/liveCardView"
-                    android:layout_marginHorizontal="@dimen/_15sdp"
-                    android:layout_marginTop="-20dp"
-                    android:fontFamily="@font/rem"
-                    android:text="Trending News"
-                    android:textColor="@color/black"
-                    android:textSize="17sp" />
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/topLeagueRv"
+                        android:layout_alignStart="@+id/liveCardView"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/rem"
+                        android:text="Upcoming Matches"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
 
 
-                <androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/trending_vp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/text2"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="20dp"
-                    tools:layout_editor_absoluteX="60dp" />
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/rc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="30dp"/>
 
-                <!--             always  come in last               -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_60sdp"
-                    android:layout_below="@id/trending_vp"
-                    android:background="#00FFFFFF" />
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rc"
+                        android:layout_alignStart="@+id/liveCardView"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginTop="-20dp"
+                        android:fontFamily="@font/rem"
+                        android:text="Trending News"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/trending_vp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="20dp"
+                        tools:layout_editor_absoluteX="60dp" />
+
+                    <!--             always  come in last               -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_below="@id/trending_vp"
+                        android:background="#00FFFFFF" />
+                </RelativeLayout>
+                <include
+                    android:id="@+id/loader_homeFragment"
+                    layout="@layout/shimmer_home_fragment_layout" />
             </RelativeLayout>
 
-            <include
-                android:id="@+id/loader_homeFragment"
-                layout="@layout/shimmer_home_fragment_layout" />
-        </RelativeLayout>
-    </ScrollView>
-</RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

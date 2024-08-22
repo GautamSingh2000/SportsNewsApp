@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">CrickNews</string>
+    <string name="app_name">SportsNews</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="default_web_id">96399702360-m02o54fqorudpd1uttqvc6vj8gmcrk0g.apps.googleusercontent.com</string>
+    <string name="default_web_id">507141716330-83hfes2abaf3v0da5gp7c2btjojb0v84.apps.googleusercontent.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_league">LeagueActivity</string>
     <string name="title_activity_compose_league">ComposeLeagueActivity</string>

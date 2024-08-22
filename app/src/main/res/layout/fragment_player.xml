@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Screens.Fragments.PlayerFragment">
+    tools:context=".screens.Fragments.Fragment_Player">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView6"
@@ -33,11 +33,17 @@
 
     </androidx.cardview.widget.CardView>
 
+<LinearLayout
+    android:layout_below="@id/cardView6"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-<!--    filters    -->
+    <!--    filters    -->
+
     <RelativeLayout
-        android:id="@+id/filter_ll"
         android:visibility="gone"
+        android:id="@+id/filter_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/cardView6"
@@ -130,7 +136,7 @@
                     android:layout_marginHorizontal="@dimen/_20sdp"
                     android:layout_marginVertical="@dimen/_7sdp"
                     android:fontFamily="@font/signika_medium"
-                    android:text="Bawling"
+                    android:text="Bowling"
                     android:textSize="@dimen/_10ssp" />
             </androidx.cardview.widget.CardView>
 
@@ -166,7 +172,7 @@
         </LinearLayout>
     </RelativeLayout>
 
-<!--search results -->
+    <!--search results -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/rv_ll"
         android:layout_width="wrap_content"
@@ -216,6 +222,8 @@
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+</LinearLayout>
+
 
 
     <include

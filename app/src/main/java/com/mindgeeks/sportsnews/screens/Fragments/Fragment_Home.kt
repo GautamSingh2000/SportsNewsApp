@@ -1,5 +1,7 @@
 package com.mindgeeks.sportsnews.screens.Fragments
 
+import android.animation.Animator
+import android.animation.Animator.AnimatorListener
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -49,6 +51,25 @@ class Fragment_Home : Fragment() {
         GetData()
 
         binding.refresh.setOnRefreshListener{
+            binding.loading.visibility = View.VISIBLE
+            binding.loading.addAnimatorListener(object : AnimatorListener{
+                override fun onAnimationStart(animation: Animator) {
+                    
+                }
+
+                override fun onAnimationEnd(animation: Animator) {
+                    binding.loading.playAnimation()
+                }
+
+                override fun onAnimationCancel(animation: Animator) {
+                    
+                }
+
+                override fun onAnimationRepeat(animation: Animator) {
+                    
+                }
+
+            })
             binding.loaderHomeFragment.rc.rc.startShimmer()
             binding.loaderHomeFragment.liveCardView.liveCardView.startShimmer()
             binding.loaderHomeFragment.text.text.startShimmer()
@@ -75,6 +96,7 @@ class Fragment_Home : Fragment() {
             versionCode = sessionManager.GetValue(Constants.VERSION_CODE).toString()
         ).observe(viewLifecycleOwner) {
             binding.refresh.isRefreshing = false
+            binding.loading.visibility = View.GONE
             if (it.status != 200) {
                 Toast.makeText(requireContext(), "Please try again later!", Toast.LENGTH_SHORT)
                     .show()

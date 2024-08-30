@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:showIn="@layout/cordinate_main_activity"
-    tools:context=".screens.Activity.Activity_Main">
+    tools:context=".mainScreen">
 
     <TextView
         android:id="@+id/title"

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white"
     android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screens.Activity.TrendingNewsActivity">
@@ -186,4 +192,29 @@
         android:layout_marginHorizontal="@dimen/_10sdp"
         android:textColor="@color/light_blue"/>
 
+    <TextView
+        android:id="@+id/sim_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/link"
+        android:textStyle="bold"
+        android:textSize="@dimen/_11ssp"
+        android:layout_marginTop="@dimen/_10ssp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="Simmilar News"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_below="@id/sim_tv"
+        tools:listitem="@layout/single_trending_news_ll"
+        android:layout_marginHorizontal="@dimen/_5sdp"/>
+
 </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

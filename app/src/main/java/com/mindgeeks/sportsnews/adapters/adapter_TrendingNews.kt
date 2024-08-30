@@ -39,6 +39,9 @@ class adapter_TrendingNews(val context: Context, val list: List<TrendingNew>) :
         holder.card.setOnClickListener {
             val intent = Intent(context, TrendingNewsActivity::class.java)
             intent.putExtra("url", data)
+            if(list.size>1) {
+                intent.putParcelableArrayListExtra("simillarList", list as ArrayList<TrendingNew>)
+            }
             context.startActivity(intent)
         }
 

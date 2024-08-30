@@ -54,11 +54,14 @@ class adapter_UpdateNews(val context : Context, val list: List<New>): RecyclerVi
                 url = data.url
             )
             val intent = Intent(context, TrendingNewsActivity::class.java)
+            if(list.size>1) {
+                intent.putParcelableArrayListExtra("simillarList", list as ArrayList<TrendingNew>)
+            }
             intent.putExtra("url",news)
             context.startActivity(intent)
         }
-  holder.moreImage.setOnClickListener{
-      val news = TrendingNew(
+          holder.moreImage.setOnClickListener{
+          val news = TrendingNew(
           author = data.author,
           content = data.content.toString(),
           desc = data.desc,
@@ -70,6 +73,10 @@ class adapter_UpdateNews(val context : Context, val list: List<New>): RecyclerVi
       )
 
             val intent = Intent(context, TrendingNewsActivity::class.java)
+
+              if(list.size>1) {
+                  intent.putParcelableArrayListExtra("simillarList", list as ArrayList<TrendingNew>)
+              }
             intent.putExtra("url",news)
             context.startActivity(intent)
         }

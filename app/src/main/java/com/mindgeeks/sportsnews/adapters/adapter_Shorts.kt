@@ -16,9 +16,10 @@ import androidx.media3.ui.PlayerView
 import androidx.recyclerview.widget.RecyclerView
 import com.mindgeeks.sportsnews.models.OtherModel.video_Item
 import com.mindgeeks.sportsnews.R
+import com.mindgeeks.sportsnews.models.ResponseModel.ShortsResponseModel
 
 
-class adapter_Shorts(val context: Context, private val videoList: List<video_Item>) : RecyclerView.Adapter<adapter_Shorts.VideoViewHolder>() {
+class adapter_Shorts(val context: Context, private val videoList: List<ShortsResponseModel.Short>) : RecyclerView.Adapter<adapter_Shorts.VideoViewHolder>() {
 
     inner class VideoViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val playerView: PlayerView = view.findViewById(R.id.videoView2)
@@ -29,10 +30,10 @@ class adapter_Shorts(val context: Context, private val videoList: List<video_Ite
         var isMuted = false
         var playState = true
 
-        fun bind(videoItem: video_Item) {
+        fun bind(videoItem: ShortsResponseModel.Short) {
             playerView.useController = false
             player = ExoPlayer.Builder(context).build().apply {
-                setMediaItem(MediaItem.fromUri(videoItem.videoUrl))
+                setMediaItem(MediaItem.fromUri(videoItem.reelUrl))
                 prepare()
                 addListener(object : Player.Listener {
                     override fun onPlaybackStateChanged(state: Int) {
@@ -87,7 +88,7 @@ class adapter_Shorts(val context: Context, private val videoList: List<video_Ite
             shareButton.setOnClickListener {
                 val shareIntent = Intent(Intent.ACTION_SEND).apply {
                     type = "text/plain"
-                    putExtra(Intent.EXTRA_TEXT, videoItem.videoUrl)
+                    putExtra(Intent.EXTRA_TEXT, videoItem.reelUrl)
                 }
                 context.startActivity(Intent.createChooser(shareIntent, "Share link"))
             }

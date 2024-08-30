@@ -61,6 +61,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.mindgeeks.sportsnews.mainScreen
 import com.mindgeeks.sportsnews.Aurthentication.authentication_google.SignInResult
 import com.mindgeeks.sportsnews.Aurthentication.authentication_google.googleAuthenticationUiClient
 import com.mindgeeks.sportsnews.models.RequestModels.GoogleSigninRequest
@@ -101,7 +102,7 @@ class SignInActivity : ComponentActivity() {
 
                     LaunchedEffect(key1 = Unit) {
                         if (googleAuthUiClient.getSignInUSer() != null) {
-                            val intent = Intent(this@SignInActivity, Activity_Main::class.java)
+                            val intent = Intent(this@SignInActivity, mainScreen::class.java)
                             startActivity(intent)
                             finish()
                         }
@@ -178,7 +179,7 @@ class SignInActivity : ComponentActivity() {
                                                 ).show()
 
                                                 val intent =
-                                                    Intent(this@SignInActivity, Activity_Main::class.java)
+                                                    Intent(this@SignInActivity, mainScreen::class.java)
                                                 startActivity(intent)
                                                 finish()
                                             } else {
@@ -312,10 +313,22 @@ fun MainComponent(
                     textAlign = TextAlign.Center,
                     fontWeight = FontWeight.W300)
                 )
+            Text(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 2.dp),
+                text = "By clicking on the above button you are agree to our",
+                style = TextStyle(
+                    color =  Color.Black,
+                    fontSize = 12.sp,
+                    textAlign = TextAlign.Center,
+                    fontWeight = FontWeight.W400
+                )
+                )
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 40.dp),
+                    .padding(top = 5.dp),
                     verticalAlignment = Alignment.Bottom,
 
                 horizontalArrangement = Arrangement.SpaceEvenly
@@ -323,31 +336,30 @@ fun MainComponent(
                 Text(
                     modifier = Modifier.clickable {
                         openTab(url = "https://cricnews.app/privacy.html", context)
-//                        val i = Intent(context, Empty_webLinktab::class.java)
-//                        i.putExtra("Link", "https://cricnews.app/privacy.html")
-//                        i.putExtra("Heading", "Private Policy")
-//
-//                        context.startActivity(i)
-
                     },
-                    text = "Private Policy",
+                    text = "Privacy Policy",
                     style = TextStyle(
-                        color = red_black,
+                        color = Color.Black,
                         fontWeight = FontWeight.W500
+                    )
+                )
+
+                Text(
+                    modifier = Modifier,
+                    text = "and",
+                    style = TextStyle(
+                        color =  Color.Black,
+                        textAlign = TextAlign.Center,
+                        fontWeight = FontWeight.W400
                     )
                 )
                 Text(
                     modifier = Modifier.clickable {
                         openTab(url = "https://cricnews.app/terms_n_conditions.html",context)
-//                        val i = Intent(context, Empty_webLinktab::class.java)
-//                        i.putExtra("Link", "https://cricnews.app/terms_n_conditions.html")
-//                        i.putExtra("Heading", "Terms and Condition")
-//                        context.startActivity(i)
-
                     },
-                    text = "Terms & Condition",
+                    text = "Terms & Conditions",
                     style = TextStyle(
-                        color = red_black,
+                        color =  Color.Black,
                         fontWeight = FontWeight.W500
                     )
                 )

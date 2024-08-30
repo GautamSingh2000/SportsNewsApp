@@ -11,6 +11,7 @@ import com.mindgeeks.sportsnews.models.RequestModels.LoginWithEmailrequest
 import com.mindgeeks.sportsnews.models.RequestModels.OpenAppRequest
 import com.mindgeeks.sportsnews.models.RequestModels.PlayerSearchRequest
 import com.mindgeeks.sportsnews.models.RequestModels.ProfileREquest
+import com.mindgeeks.sportsnews.models.RequestModels.ShortsRequestModel
 import com.mindgeeks.sportsnews.models.ResponseModel.DateWiseUpdateResponse
 import com.mindgeeks.sportsnews.models.ResponseModel.GetLeagueDataResponse
 import com.mindgeeks.sportsnews.models.ResponseModel.GetLiveMatchDataResponse
@@ -22,6 +23,7 @@ import com.mindgeeks.sportsnews.models.ResponseModel.OpenAppResponse
 import com.mindgeeks.sportsnews.models.ResponseModel.PlayerSearchResponse
 import com.mindgeeks.sportsnews.models.ResponseModel.ProfileResponse
 import com.mindgeeks.sportsnews.models.ResponseModel.SearchResponse
+import com.mindgeeks.sportsnews.models.ResponseModel.ShortsResponseModel
 import retrofit2.Call
 
 class Repositoy(val context: Context) {
@@ -34,6 +36,11 @@ class Repositoy(val context: Context) {
 
      fun GetLeagueData(resquest: GetLeagDataRequest): Call<GetLeagueDataResponse> {
          return  Retrofit_object.GetLeagueData(resquest)
+     }
+
+
+    fun GEtShorts(resquest: ShortsRequestModel): Call<ShortsResponseModel> {
+         return  Retrofit_object.GetShotsFragmentData(resquest)
      }
 
     fun LoginWithEmail(resquest: LoginWithEmailrequest): Call<LoginWithEmailResponse> {

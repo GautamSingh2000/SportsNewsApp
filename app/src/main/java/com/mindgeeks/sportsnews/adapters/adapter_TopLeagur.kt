@@ -36,8 +36,6 @@ class adapter_TopLeagur(val context : Context, val list: ArrayList<League>):Recy
         holder.card.setOnClickListener {
             val intent = Intent(context, Activity_League::class.java)
             intent.putExtra("LeagueId",data.tournamentId)
- 
- 
             intent.putExtra("LeagueName",data.tournamentName)
             intent.putExtra("LeagueImage",data.image)
   

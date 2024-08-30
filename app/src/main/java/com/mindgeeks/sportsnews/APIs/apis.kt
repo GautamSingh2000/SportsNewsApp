@@ -10,6 +10,7 @@ import com.mindgeeks.sportsnews.models.RequestModels.LoginWithEmailrequest
 import com.mindgeeks.sportsnews.models.RequestModels.OpenAppRequest
 import com.mindgeeks.sportsnews.models.RequestModels.PlayerSearchRequest
 import com.mindgeeks.sportsnews.models.RequestModels.ProfileREquest
+import com.mindgeeks.sportsnews.models.RequestModels.ShortsRequestModel
 import com.mindgeeks.sportsnews.models.ResponseModel.DateWiseUpdateResponse
 import com.mindgeeks.sportsnews.models.ResponseModel.GetLeagueDataResponse
 import com.mindgeeks.sportsnews.models.ResponseModel.GetLiveMatchDataResponse
@@ -21,6 +22,7 @@ import com.mindgeeks.sportsnews.models.ResponseModel.OpenAppResponse
 import com.mindgeeks.sportsnews.models.ResponseModel.PlayerSearchResponse
 import com.mindgeeks.sportsnews.models.ResponseModel.ProfileResponse
 import com.mindgeeks.sportsnews.models.ResponseModel.SearchResponse
+import com.mindgeeks.sportsnews.models.ResponseModel.ShortsResponseModel
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST
@@ -33,6 +35,8 @@ interface apis {
 
     @POST("home")
     fun GetHomeFragmentData(@Body homeFragmentRequest: HomeFragmentRequest): Call<HomeFragmentResponse>
+    @POST("shortsVideos")
+    fun GetShotsFragmentData(@Body rewust : ShortsRequestModel): Call<ShortsResponseModel>
 
     @POST("leagueData")
     fun GetLeagueData(@Body getLeagueDataRequest: GetLeagDataRequest): Call<GetLeagueDataResponse>

@@ -2,6 +2,7 @@ package com.mindgeeks.sportsnews.adapters
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -71,11 +72,16 @@ class adapter4LeagueMatches(
                 next = true
                 holder.TeamA.text = data.teama.name
                 holder.TeamB.text = data.teamb.name
-                holder.runTeamA.text = extractTextAfterAmpersand(data.teama.scores)
-                holder.runTeamB.text = extractTextAfterAmpersand(data.teamb.scores)
+                try {
+                    holder.runTeamA.text = extractTextAfterAmpersand(data.teama.scores)
+                    holder.runTeamB.text = extractTextAfterAmpersand(data.teamb.scores)
 
-                holder.teamAOver.text = " ( ${extractTextAfterAmpersand(data.teama.overs)} ov )"
-                holder.teamBOver.text = " ( ${extractTextAfterAmpersand(data.teamb.overs)} ov )"
+                    holder.teamAOver.text = " ( ${extractTextAfterAmpersand(data.teama.overs)} ov )"
+                    holder.teamBOver.text = " ( ${extractTextAfterAmpersand(data.teamb.overs)} ov )"
+                }catch (e : Exception)
+                {
+                    Log.e("adapter4LeagueMAtches","exception ${e.message}")
+                }
                 if (data.winningTeam.equals("Team A")) {
                     holder.winLogoA.visibility = View.VISIBLE
                 }
@@ -100,6 +106,7 @@ class adapter4LeagueMatches(
                 destinationFragment.arguments = bundle
 
                 fragmentManager.beginTransaction()
+                    .addToBackStack("Activity_League")
                     .add(R.id.LeagueActivityContainer, destinationFragment)
                     .commit()
             }else{

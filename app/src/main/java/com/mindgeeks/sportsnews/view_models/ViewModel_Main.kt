@@ -1,5 +1,6 @@
 package com.mindgeeks.sportsnews.view_models
 
+import android.app.appsearch.GetSchemaResponse
 import android.content.Context
  
  
@@ -30,6 +31,8 @@ import com.mindgeeks.sportsnews.models.ResponseModel.SearchResponse
 import com.mindgeeks.sportsnews.R
 import com.mindgeeks.sportsnews.Repos.Repositoy
 import com.mindgeeks.sportsnews.Components.customDialog
+import com.mindgeeks.sportsnews.models.RequestModels.ShortsRequestModel
+import com.mindgeeks.sportsnews.models.ResponseModel.ShortsResponseModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -54,6 +57,7 @@ class ViewModel_Main(val context : Context) : ViewModel() {
     private var playerSearchResponse = MutableLiveData<PlayerSearchResponse>()
     private var GoogleSignedResposne = MutableLiveData<GoogleSigninResponse>()
     private var GetLeagueDataResponse = MutableLiveData<GetLeagueDataResponse>()
+    private var GetShortsResponse = MutableLiveData<ShortsResponseModel>()
     private var LoginWithEmailResponse = MutableLiveData<LoginWithEmailResponse>()
     private var ProfileResponse = MutableLiveData<ProfileResponse>()
 
@@ -166,6 +170,12 @@ class ViewModel_Main(val context : Context) : ViewModel() {
         val call = repo.GetLeagueData(request)
         enqueueCall(call, GetLeagueDataResponse)
         return GetLeagueDataResponse
+    }
+
+    fun GEtShorts(request: ShortsRequestModel): MutableLiveData<ShortsResponseModel> {
+        val call = repo.GEtShorts(request)
+        enqueueCall(call, GetShortsResponse)
+        return GetShortsResponse
     }
 
     fun GoogleSignin(request: GoogleSigninRequest): MutableLiveData<GoogleSigninResponse> {

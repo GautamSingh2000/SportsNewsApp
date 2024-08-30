@@ -24,6 +24,7 @@ import com.mindgeeks.sportsnews.Utils.Constants
 import com.mindgeeks.sportsnews.Utils.SessionManager
 import com.mindgeeks.sportsnews.view_models.ViewModel_Main
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
+import com.mindgeeks.sportsnews.mainScreen
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -195,7 +196,7 @@ class Activity_Splash_Screen : AppCompatActivity() {
 
     private fun switchMainScreen(screen : String) {
         var intent = Intent()
-        if(screen.equals("mainScreen")) intent = Intent(context, Activity_Main::class.java)
+        if(screen.equals("mainScreen")) intent = Intent(context, mainScreen::class.java)
         else intent = Intent(context, SignInActivity::class.java)
         startActivity(intent)
         overridePendingTransition(R.anim.right_slide_in_anim, R.anim.left_slide_out_anim)

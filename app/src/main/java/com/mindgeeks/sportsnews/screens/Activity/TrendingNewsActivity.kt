@@ -11,6 +11,8 @@ import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import com.mindgeeks.sportsnews.models.ResponseModel.TrendingNew
 import com.mindgeeks.sportsnews.R
+import com.mindgeeks.sportsnews.adapters.adapter_TrendingNews
+import com.mindgeeks.sportsnews.adapters.trending_newsrv_Adapter
 import com.mindgeeks.sportsnews.databinding.ActivityTrendingNewsBinding
 import com.squareup.picasso.Picasso
 
@@ -18,6 +20,8 @@ import com.squareup.picasso.Picasso
 class TrendingNewsActivity : AppCompatActivity() {
 
     lateinit var binding : ActivityTrendingNewsBinding
+
+    private var list = ArrayList<TrendingNew>()
             override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
                 binding = ActivityTrendingNewsBinding.inflate(layoutInflater)
@@ -27,7 +31,8 @@ class TrendingNewsActivity : AppCompatActivity() {
                     decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                     statusBarColor = Color.TRANSPARENT
                 }
-                val link = intent.getParcelableExtra<TrendingNew>("url")
+                var link:TrendingNew? = intent.getParcelableExtra<TrendingNew>("url")
+
                 if (link != null) {
                     binding.link.setOnClickListener {
                         openTab(link.url)
@@ -47,6 +52,18 @@ class TrendingNewsActivity : AppCompatActivity() {
 
                 binding.backbtn.setOnClickListener{
                     onBackPressed()
+                }
+
+                val parcelableArray = intent.getParcelableArrayExtra("simillarList")
+                if (parcelableArray != null) {
+                    val trendingNewsList = parcelableArray.filterIsInstance<TrendingNew>()
+                    list.addAll(trendingNewsList.shuffled())
+                }
+                if(list.size > 0) {
+                    binding.rv.adapter = trending_newsrv_Adapter(this,list)
+                }else{
+                    binding.simTv.visibility = View.GONE
+                    Toast.makeText(this,"No Similar News!!",Toast.LENGTH_SHORT).show()
                 }
         }
 

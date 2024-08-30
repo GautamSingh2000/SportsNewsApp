@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/red_gradel"
-    tools:context=".screens.Activity.Activity_Main">
+    tools:context=".mainScreen">
 
     <ImageView
         android:id="@+id/back_btn"
@@ -290,6 +290,40 @@
             </LinearLayout>
 
 
+            <LinearLayout
+                android:id="@+id/private_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/help"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_weight="1"
+                    android:src="@drawable/policy"
+                      android:tint="@color/little_dark_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:paddingStart="@dimen/_13sdp"
+                    android:text="Private Policy"
+                    android:textColor="@color/black"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/_12ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:padding="@dimen/_5sdp"
+                      android:tint="@color/little_dark_gray"
+                    android:src="@drawable/baseline_arrow_forward_ios_24" />
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/help"
                 android:layout_width="match_parent"

@@ -9,9 +9,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.mindgeeks.sportsnews" />
-                  <option name="mobileSdkAppId" value="1:507141716330:android:0c10f987bc0d0f10fc4d13" />
-                  <option name="projectId" value="sports-news-e3db0" />
-                  <option name="projectNumber" value="507141716330" />
+                  <option name="mobileSdkAppId" value="1:985135750958:android:232a204c7af79c078124bf" />
+                  <option name="projectId" value="sportsnews-32a82" />
+                  <option name="projectNumber" value="985135750958" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

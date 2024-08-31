@@ -96,8 +96,6 @@ class Activity_Login_With_Email : AppCompatActivity() {
                 {
                     binding.email.clearFocus()
                     binding.password.clearFocus()
-                    binding.email.focusable = View.NOT_FOCUSABLE
-                    binding.password.focusable = View.NOT_FOCUSABLE
                     Login(binding.email.text.toString().trim(),binding.password.text.toString().trim())
                 }else{
                     Toast.makeText(this,"Enter Enter Password!!",Toast.LENGTH_SHORT).show()

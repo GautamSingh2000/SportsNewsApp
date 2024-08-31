@@ -1,5 +1,6 @@
 package com.mindgeeks.sportsnews
 
+import Fragment_Shots
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -31,7 +32,6 @@ import com.mindgeeks.sportsnews.Utils.SessionManager
 import com.mindgeeks.sportsnews.screens.Fragments.Fragment_Home
 import com.mindgeeks.sportsnews.screens.Fragments.Fragment_Player
 import com.mindgeeks.sportsnews.screens.Fragments.Fragment_Search
-import com.mindgeeks.sportsnews.screens.Fragments.Fragment_Shots
 import com.mindgeeks.sportsnews.screens.Fragments.Fragment_Update
 import com.squareup.picasso.Picasso
 
